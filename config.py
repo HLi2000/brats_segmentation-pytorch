@@ -8,10 +8,7 @@ import platform
 _C = CN()
 _C.DATASET = CN()
 
-if "Win" in platform.system():
-    _C.DATASET.DATA_ROOT = 'G:/data_repos/Brats2018'
-else:
-    _C.DATASET.DATA_ROOT = "/home/share/data_repos/Brats2018"
+_C.DATASET.DATA_ROOT = '/gdrive/My Drive/PyTorch/medical_img/MICCAI_BraTS_2018_Data_Training'
 
 _C.DATASET.NUM_FOLDS = 4
 _C.DATASET.SELECT_FOLD = 0
@@ -23,7 +20,7 @@ _C.DATALOADER.BATCH_SIZE = 1
 _C.DATALOADER.NUM_WORKERS = 6
 
 _C.MODEL = CN()
-_C.MODEL.NAME = 'unet-vae'
+_C.MODEL.NAME = 'unet'
 _C.MODEL.INIT_CHANNELS = 16
 _C.MODEL.DROPOUT = 0.2
 _C.MODEL.LOSS_WEIGHT = 0.1
@@ -35,4 +32,4 @@ _C.SOLVER.POWER = 0.9
 _C.SOLVER.NUM_EPOCHS = 300
 
 _C.MISC = CN()
-_C.LOG_DIR = './logs'
+_C.LOG_DIR = '/gdrive/My Drive/PyTorch/runs/'
