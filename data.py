@@ -27,7 +27,7 @@ class Brats2018(Dataset):
         modes = list(self.modes) + ['seg']
         for mode in modes:
             patient_id = os.path.split(patient_dir)[-1]
-            volume_path = os.path.join(patient_dir, patient_id + "_" + mode + '.nii')
+            volume_path = os.path.join(patient_dir, patient_id + "_" + mode + '.nii.gz')
             volume = nib.load(volume_path).get_data()
             if not mode == "seg":
                 volume = self.normlize(volume)  # [0, 1.0]
