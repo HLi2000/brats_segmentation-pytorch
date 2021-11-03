@@ -8,7 +8,7 @@ import platform
 _C = CN()
 _C.DATASET = CN()
 
-_C.DATASET.DATA_ROOT = '/gdrive/My Drive/PyTorch/medical_img/MICCAI_BraTS_2018_Data_Training'
+_C.DATASET.DATA_ROOT = '/gdrive/My Drive/PyTorch/medical_img/MICCAI_BraTS_2018_Data_Training/'
 
 _C.DATASET.NUM_FOLDS = 4
 _C.DATASET.SELECT_FOLD = 0
